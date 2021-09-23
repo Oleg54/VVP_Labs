@@ -31,7 +31,7 @@ namespace Labs
             Console.WriteLine(GetAnswerToExercise7("Программа"));
         }
 
-
+        //Возвращает строку, в которой удалены двойные пробелы
         private static string DeleteDoubleSpaces(this string _input)
         {
             string _result = "";
@@ -43,7 +43,8 @@ namespace Labs
             }
             return _result;
         }
-
+        
+        //Проверяет, является ли буква гласной
         private static bool CharacterIsVowel(this char _input)
         {
             string _vowels = "аеёиоуыэюя";
@@ -190,8 +191,9 @@ namespace Labs
             string _result = "";
 
             string _oddCharacters = "";
-
+            //индексация начинается с 0, значит четными будут элементы с индексами 1, 3, 5...
             for (int i = 1; i < _input.Length; i += 2) _result += _input[i];
+            //нечетными будут элементы с индексами 0, 2, 4...
             for (int i = 0; i < _input.Length; i += 2) _oddCharacters += _input[i];
 
             for (int i = _oddCharacters.Length - 1; i >= 0; i--) _result += _oddCharacters[i];
