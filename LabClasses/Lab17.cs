@@ -4,6 +4,7 @@ namespace Labs
 {
     public static class Lab17
     {
+        //Метод для вывода результатов, вызывается из класса Program
         public static void WriteAllExercises()
         {
             Console.WriteLine("Ответы на лабораторную 17");
@@ -73,7 +74,7 @@ namespace Labs
             return _number + 1; //был найден индекс элемента, в задаче требуется номер элемента
         }
 
-        public static string GetAnswerToExercise5(int[] _input)
+        public static string GetAnswerToExercise5(int[] _input)     
         {
             (int, int) _indexes = new(-1, -1);
 
@@ -99,7 +100,7 @@ namespace Labs
             _indexes.Item2++;
 
             if (_indexes.Item1 > _indexes.Item2) return $"{ _indexes.Item2} { _indexes.Item1}";
-            else return $"{ _indexes.Item1} { _indexes.Item2}";
+            else return $"{ _indexes.Item1} { _indexes.Item2}"; 
 
         }
     }
