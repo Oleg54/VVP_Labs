@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace Labs
 {
@@ -7,26 +7,27 @@ namespace Labs
         //Метод для вывода результатов, вызывается из класса Program
         public static void WriteAllExercises()
         {
+            Console.WriteLine();
             Console.WriteLine("Ответы на лабораторную 24");
 
             Console.Write("Задание 1 (Найти кол-во слов в строке): ");
             Console.WriteLine(GetAnswerToExercise1("Сегодня,     разглядывая  на снегу   следы зверушек    и птиц, вот что    я  по    этим следам     прочитал"));
-            
+
             Console.Write("Задание 2 (Найти длину самого короткого слова): ");
             Console.WriteLine(GetAnswerToExercise2("Сегодня,     разглядывая  на снегу   следы зверушек    и птиц, вот что    я  по    этим следам     прочитал"));
-            
+
             Console.Write("Задание 3 (Заменить все вхождения первой буквы слова на .): ");
             Console.WriteLine(GetAnswerToExercise3("МИНИМАЛЬНЫЙ МИНИМУМ МАКСИМАЛЬНЫЙ МАКСИМУМ"));
-            
+
             Console.Write("Задание 4 (Подсчитать кол-во гласных букв): ");
             Console.WriteLine(GetAnswerToExercise4("Солнечный день в самом начале лета"));
-            
+
             Console.Write("Задание 5 (Выделить имя файла из его полного пути): ");
             Console.WriteLine(GetAnswerToExercise5("C:\\Windows\\DiagTrack\\analyticsevents.dat"));
-            
+
             Console.Write("Задание 6 (Выделить из полного пути файла последний каталог, в котором находится файл): ");
             Console.WriteLine(GetAnswerToExercise6("C:\\Windows\\DiagTrack\\analyticsevents.dat"));
-            
+
             Console.Write("Задание 7 (Зашифровать строку): ");
             Console.WriteLine(GetAnswerToExercise7("Программа"));
         }
@@ -43,7 +44,7 @@ namespace Labs
             }
             return _result;
         }
-        
+
         //Проверяет, является ли буква гласной
         private static bool CharacterIsVowel(this char _input)
         {
