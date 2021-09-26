@@ -18,7 +18,7 @@ namespace Labs
         public static void WriteAllExercises()
         {
             Console.WriteLine();
-            Console.WriteLine("Ответы на лабораторную 19");
+            Console.WriteLine("Ответы на лабораторную 20");
 
             Console.WriteLine("Задание 1 (сформировать массивы B и C, записав с первый длины серий, а во второй значения серий): ");
             int[] _array1 = new int[] { 3, 4, 6, 5, 5, 5, 6, 6, 2, 3, 1, 1, 1, 1 };
