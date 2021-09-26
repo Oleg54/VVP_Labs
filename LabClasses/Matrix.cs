@@ -17,8 +17,8 @@ public struct Matrix<T>
 	public T this[int _m, int _n]
 	{
 		get
-        {
+        	{
 			return values[_m, _n];
-        }
+        	}
 	}
 }
