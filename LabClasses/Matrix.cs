@@ -32,7 +32,7 @@ public struct Matrix<T>
 				for(int n = 0; n < N; n++)
 				{
 					_result += values[m, n].ToString();
-					if(n == N - 1) _result += ", ";
+					if(n != N - 1) _result += ", ";
 				}
 				_result += "| \n";
 			}
