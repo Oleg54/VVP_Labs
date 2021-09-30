@@ -21,4 +21,23 @@ public struct Matrix<T>
 			return values[_m, _n];
         	}
 	}
+	
+		public override string ToString()
+		{
+			string _result = "";
+			
+			for(int m = 0; m < M; m++)
+			{
+				_result += "| ";
+				for(int n = 0; n < N; n++)
+				{
+					_result += values[m, n].ToString();
+					if(n == N - 1) _result += ", ";
+				}
+				_result += "| \n";
+			}
+			
+			
+			return _result;
+		}
 }
