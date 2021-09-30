@@ -34,7 +34,7 @@ public struct Matrix<T>
 					_result += values[m, n].ToString();
 					if(n != N - 1) _result += ", ";
 				}
-				_result += "| \n";
+				_result += " | \n";
 			}
 			
 			
