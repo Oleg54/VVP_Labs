@@ -1,0 +1,59 @@
+using System;
+using System.Collections.Generic;
+
+namespace Labs
+{
+
+	public static class Lab22
+	{
+		
+		public static void Main() => WriteAllExercises();
+		
+                public static void WriteAllExercises()
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Ответы на лабораторную 22");
+
+                    Console.WriteLine("Задание 1 (): ");
+                                 Matrix<float> _matrix1;
+
+                    _matrix1.values = new float[,]
+                    {
+                        { 3,    5,   6,    11,   20 },
+
+                        { 634, 435, 0,  131,   55 },
+
+                        { 43,  342,  6,    11,   4 },
+
+                        { 53,  435, 3456,  345,  43 },
+                    };
+
+                                Console.WriteLine(_matrix1);
+
+                        }
+
+
+                public static Matrix<float> GetAnswerToExercise1<T>(Matrix<float> _matrix)
+		{
+			
+			for(int m = 0; m < _matrix.M; m++)
+			{
+				
+				(int, int) _indexes = new (0, 0); // item1 - минимального элемента, item2 - индекс максимального
+				for(int n = 0; n < _matrix.N; n++)
+				{
+					if(_matrix[m, n] < _matrix[m, _indexes.Item1]) _indexes.Item1 = n;
+					if(_matrix[m, n] > _matrix[m, _indexes.Item2]) _indexes.Item2 = n;
+				}
+				
+				float _temp = _matrix[m, _indexes.Item1];
+				_matrix[m, _indexes.Item1] = _matrix[m, _indexes.Item2];
+				_matrix[m, _indexes.Item2] = _temp;
+			}
+			
+			return _matrix;
+		}
+
+	}
+	
+}
