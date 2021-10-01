@@ -12,6 +12,8 @@ namespace Labs
 			Lab19.WriteAllExercises();
 			Lab20.WriteAllExercises();
 			Lab21.WriteAllExercises();
+			Lab22.WriteAllExercises();
+			Lab23.WriteAllExercises();
 			Lab24.WriteAllExercises();
 			Lab26_Calculator.StartCalculator();
 		}
