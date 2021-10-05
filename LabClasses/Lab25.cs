@@ -22,6 +22,14 @@ namespace Labs
             Console.Write("Задание 3 (добавить в начало первого файла содержимое второго) ");
             AnswerToExercise3("C:/Users/o.k.kravchenko/Desktop/text3.1.txt", "C:/Users/o.k.kravchenko/Desktop/text3.2.txt");
 
+
+            Console.Write("Задание 4 (убрать множественные пробелы) ");
+            AnswerToExercise4("C:/Users/o.k.kravchenko/Desktop/text4.txt");
+
+
+            Console.Write("Задание 5 (вывести количество абзацев) ");
+            Console.WriteLine(GetAnswerToExercise5("C:/Users/o.k.kravchenko/Desktop/text5.txt"));
+
         }
 
 
@@ -54,6 +62,22 @@ namespace Labs
             string file2 = File.ReadAllText(path2);
 
             File.WriteAllText(path1, file2 + file1);
+        }
+
+        public static void AnswerToExercise4(string path)
+        {
+            string file = File.ReadAllText(path);
+
+            while (file.Contains("  ")) file = file.Replace("  ", " ");
+
+            File.WriteAllText(path, file);
+        }
+
+        public static int GetAnswerToExercise5(string path)
+        {
+            //получение содержимого файла, далее метод Split разделяет его на массив строк по разделителю "     ",
+            //выводится длина этого массива - 1, так как первая красная строка не учитывается
+            return File.ReadAllText(path).Split("     ").Length - 1;
         }
     }
 }
