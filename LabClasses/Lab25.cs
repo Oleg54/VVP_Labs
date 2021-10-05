@@ -60,14 +60,16 @@ namespace Labs
         {
             string file1 = File.ReadAllText(path1);
             string file2 = File.ReadAllText(path2);
-
+            
+            //запись в первый файл содержимого второго и первого
             File.WriteAllText(path1, file2 + file1);
         }
 
         public static void AnswerToExercise4(string path)
         {
             string file = File.ReadAllText(path);
-
+            
+            //пока в строки есть двойные пробелы, заменить их на единичные
             while (file.Contains("  ")) file = file.Replace("  ", " ");
 
             File.WriteAllText(path, file);
