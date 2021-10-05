@@ -9,7 +9,7 @@ namespace Labs
         public static void WriteAllExercises()
         {
             Console.WriteLine();
-            Console.WriteLine("Ответы на лабораторную 24");
+            Console.WriteLine("Ответы на лабораторную 25");
 
             Console.Write("Задание 1 (): ");
         }
