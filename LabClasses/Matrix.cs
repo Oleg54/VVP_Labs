@@ -20,6 +20,10 @@ public struct Matrix<T>
         	{
 			return values[_m, _n];
         	}
+		set
+		{
+			values[_m, _n] = value;
+		}
 	}
 	
 		public override string ToString()
